@@ -8,7 +8,7 @@ exports.seed = function(knex, Promise) {
         name: 'Rome Mod',
         details: 'The Rome Mod is great board for all moutain riders. ',
         price: 499.99,
-        barcode: 1230030288,
+        barcode: '0012300302883',
         picUrl: 1,
         categoryId: 1
       }];
