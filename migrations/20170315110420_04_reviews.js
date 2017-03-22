@@ -2,9 +2,9 @@
 exports.up = function(knex, Promise) {
   return knex.schema.createTable('review', (table) =>{
     table.increments();
-    table.text('memberName').notNullable();
+    table.text('memberName');
     table.text('review').notNullable();
-    table.integer('rating').notNullable();
+    table.integer('rating');
     table.integer('productId').references('product.id').unsigned().onDelete('cascade');
 
   })

@@ -6,7 +6,7 @@ exports.up = function(knex, Promise) {
     table.text('details').notNullable();
     table.float('price').notNullable();
     table.text('barcode').notNullable();
-    table.integer('picUrl');
+    table.text('picUrl');
     table.integer('categoryId').references('category.id').unsigned().onDelete('cascade');
 
   })
