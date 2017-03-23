@@ -17,7 +17,7 @@ router.get('/:BID', function(req, res, next) {
 
 router.get('/:BID/review', function(req, res, next) {
     return knex("review")
-        .select('review', 'productId', 'rating').innerJoin('product', 'product.id', 'productId')
+        .select('review', 'memberName', 'productId', 'rating').innerJoin('product', 'product.id', 'productId')
         .where('barcode', req.params.BID)
         .then(data => {
             res.json(data);
